@@ -33,6 +33,8 @@ import platform
 source_files =       glob.glob('./src/**/*.c*', recursive=True )
 source_files.extend( glob.glob('./python/**/*.cpp', recursive=True ) )
 
+raise Exception(platform.system())
+
 if platform.system() == "Linux":
     libs = ["stdc++"] # Required for Linux and doesn't work in Windows
 else:
